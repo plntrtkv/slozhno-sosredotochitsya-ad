@@ -2,4 +2,149 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--main-color);
+  background-image: var(--page-bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+* {
+  font-family: var(--font-family);
+}
+
+header {
+  height: 668px;
+}
+
+.section-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 23.4px;
+  letter-spacing: 0%;
+}
+
+.title-decor {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--main-color);
+  background-color: var(--accent-color);
+}
+
+.accent-title {
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 18px;
+  color: var(--accent-color);
+  line-height: 23.4px;
+  background-color: var(--main-color);
+}
+
+.header__title {
+  color: var(--title-accent-color);
+  letter-spacing: 0%;
+  line-height: 83%;
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__theme-menu-button {
+  background: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.link {
+  color: var(--text-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.header__theme-menu-item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0%;
+  color: var(--accent-color);
+}
+
+.footer__title {
+  color: var(--title-accent-color);
+  letter-spacing: 0%;
+  line-height: 83%;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .header {
+    height: calc(668px + 356 * (100vw - 375px) / 393);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: calc(1024px - 256 * (100vw - 768px) / 256);
+  }
+}
+
+@media (max-width: 376px) {
+    .header__title,
+    .footer__title {
+        font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    }
+    /* img {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+    display: block;
+    } */
+}
+
+@media (min-width: 375px) {
+    .header__title,
+    .footer__title {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 768px;
+  }
 }
