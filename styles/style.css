@@ -65,6 +65,7 @@ header {
 
 .tips-section {
   margin-top: clamp(50px, calc(50px + 30 * (100vw - 375px) / 393), 80px);
+  padding-bottom: 40px;
 }
 
 .two-column-section {
@@ -96,6 +97,7 @@ header {
   left: clamp(0px, calc(10px - 10 * (100vw - 375px) / 393), 0px);
   top: calc(238px + clamp(0px, (100vw - 375px) * 229 / 393, 229px) - max(0px,(100vw - 768px) * 148 / 256));
 }
+
 
 .header__theme-menu-button {
   background: none;
@@ -187,11 +189,6 @@ footer {
   height: auto;
 }
 
-.tips-section {
-  padding-bottom: 40px;
-}
-
-
 .footer__title {
   color: var(--title-accent-color);
   letter-spacing: 0%;
@@ -242,7 +239,6 @@ footer {
     margin-top: -20px;
   }
 
-
   .two-column-section {
     display: grid;
     grid-template-columns:minmax(236px, calc(236px + (314 - 236) * (100vw - 768px) / (1024 - 768))) 1fr;
@@ -258,12 +254,15 @@ footer {
   .two-column-section > div {
     grid-column: 2;
   }
-  .tips{
+
+  .tips {
   margin-top: -100px;
   }
+
   .tips .title-decor:first-child {
     margin-top: 30px;
   }
+
   .tip:not(:first-child) {
   margin-top: -6px;
   }
@@ -295,21 +294,26 @@ footer {
     width: 100%;
     height: 100%;
   }
-  .picture:nth-child(1) { 
-    grid-area: img1; 
+
+  .picture:nth-child(1) {
+    grid-area: img1;
   }
-  .picture:nth-child(2) { 
-    grid-area: img2; 
+
+  .picture:nth-child(2) {
+    grid-area: img2;
   }
-  .picture:nth-child(3) { 
-    grid-area: img3; 
+
+  .picture:nth-child(3) {
+    grid-area: img3;
   }
-  .picture:nth-child(4) { 
-    grid-area: img4; 
+  
+  .picture:nth-child(4) {
+    grid-area: img4;
     justify-self: center;
   }
-  .picture:nth-child(5) { 
-    grid-area: img5; 
+
+  .picture:nth-child(5) {
+    grid-area: img5;
   }
 
   footer {
@@ -324,6 +328,7 @@ footer {
   .tips-section {
     padding-bottom: 60px;
   }
+
   .header__rec {
     margin-right: 20;
     margin-top: 20;
@@ -336,12 +341,15 @@ footer {
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
+
   .header__theme-menu {
     top: 75px;
   }
+
   .header__title {
     margin-left: 10px;
   }
+
   main {
     padding-left: 10px;
     padding-right: 10px;
@@ -353,9 +361,11 @@ footer {
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
     footer {
     min-height: calc(668px + 356 * (100vw - 375px) / 393);
   }
+
   .tips-section {
     padding-bottom: calc(40px + 20 * (100vw - 375px) / 393);
   }
@@ -429,9 +439,11 @@ footer {
   .tips-section .accent-title {
     margin-bottom: 20px;
   }
+
   .tip:not(:last-child) {
     margin-bottom: 20px;
   }
+
   .gallery-section {
     margin-top: -40px;
   }
