@@ -6,9 +6,7 @@
   background-image: var(--page-bg-image);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 
 * {
@@ -17,6 +15,22 @@
 
 header {
   height: 668px;
+}
+
+.header__text {
+  position: absolute;
+  margin: 0;
+  box-sizing: border-box;
+  left: auto;
+  right: clamp(10px, calc(10px + 10 * (100vw - 375px) / 393), 20px);
+  top: calc(485px + min(239px, max(0px, (100vw - 375px) * 239 / 393)) - max(0px, (100vw - 768px) * 161 / 256));
+  width: calc(355px + min(9px, max(0px, (100vw - 375px) * 9 / 393)) + max(0px, (100vw - 768px) * 127 / 256));
+}
+
+.header__theme-menu {
+  position: absolute;
+  right: 10px;
+
 }
 
 .section-text {
@@ -36,6 +50,22 @@ header {
 
 .accent-title {
   font-weight: 700;
+  
+}
+
+.two-column-section:first-of-type {
+  padding-top: calc(
+      40px + min(20px, max(0px, (100vw - 375px) * 20 / 393)));
+}
+
+.tips-section {
+  margin-top: clamp(50px, calc(50px + 30 * (100vw - 375px) / 393), 80px);
+}
+
+.two-column-section {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
 }
 
 .section-title {
@@ -45,12 +75,23 @@ header {
   background-color: var(--main-color);
 }
 
+.title-decor {
+  margin-bottom: 10px;
+}
+.middle-section .section-title {
+  margin-top: clamp(50px, calc(50px + 30 * (100vw - 375px) / 393), 80px);
+}
+
 .header__title {
   color: var(--title-accent-color);
   letter-spacing: 0%;
   line-height: 83%;
   font-weight: 700;
   text-shadow: 4px 4px 0 var(--accent-color);
+  position: absolute;
+  margin: 0; 
+  left: clamp(0px, calc(10px - 10 * (100vw - 375px) / 393), 0px);
+  top: calc(238px + clamp(0px, (100vw - 375px) * 229 / 393, 229px) - max(0px,(100vw - 768px) * 148 / 256));
 }
 
 .header__theme-menu-button {
@@ -58,9 +99,13 @@ header {
   background-color: transparent;
   border: none;
   outline: none;
-  padding: 0;
+  padding: 1.5px 13px;
   margin: 0;
   text-transform: lowercase;
+}
+
+main {
+  background-color: var(--main-color);
 }
 
 .decorated-zone {
@@ -115,19 +160,52 @@ header {
   .header {
     height: calc(668px + 356 * (100vw - 375px) / 393);
   }
+  .header__title {
+    margin-left: calc(10px - 10 * (100vw - 375px) / 393);
+  }
+  main {
+    padding-left: calc(10px + 10 * (100vw - 375px) / 393);
+    padding-right: calc(10px + 10 * (100vw - 375px) / 393);
+  }
 }
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  .header__theme-menu {
+    top: calc(75px + 193 * (100vw - 375px) / 649);
+    }
+  }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header {
     height: calc(1024px - 256 * (100vw - 768px) / 256);
   }
+  main {
+    padding-left: calc(20px - 10 * (100vw - 768px) / 256);
+    padding-right: calc(20px - 10 * (100vw - 768px) / 256);
+  }
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 376px) {
-    .header__title,
-    .footer__title {
-        font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    }
+  .header__title,
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+  .header__theme-menu {
+    top: 75px;
+  }
+  .header__title {
+    margin-left: 10px;
+  }
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
     /* img {
     width: calc(100% + 20px);
     margin-left: -10px;
@@ -136,15 +214,43 @@ header {
     } */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 376px) {
     .header__title,
     .footer__title {
-        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
+}
+
+@media (max-width: 1023px) {
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    
+  }
 }
 
 @media (min-width: 1024px) {
   .header {
     height: 768px;
+  }
+  .header__theme-menu {
+    right: auto;
+    top: auto;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .header__theme-menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+  }
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
