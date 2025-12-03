@@ -4,6 +4,7 @@ body {
   max-inline-size: 1440px;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 *,
@@ -35,6 +36,7 @@ picture {
 
 button,
 a {
+  text-decoration: none;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
