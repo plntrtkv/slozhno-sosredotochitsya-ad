@@ -9,13 +9,11 @@
   --accent-color: #ff0070;
   --text-color: #F1B2CE;
   --title-accent-color: #DB00FF;
+  --font-family: "IBM Plex Mono", sans-serif;
+  --page-bg-image: url('../images/cover-image-light.png');
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-.header__rec {
+.header.decorated-zone .header__rec {
   position: absolute;
   top: 10px;
   right: 20px;
