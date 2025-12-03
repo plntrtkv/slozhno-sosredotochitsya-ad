@@ -306,7 +306,7 @@ footer {
   .picture:nth-child(3) {
     grid-area: img3;
   }
-  
+
   .picture:nth-child(4) {
     grid-area: img4;
     justify-self: center;
@@ -454,7 +454,7 @@ footer {
 }
 
 @media (min-width: 986px) {
-  .tips-section .section-title{
+  .tips-section .section-title {
     margin-bottom: 20px;
   }
 }
