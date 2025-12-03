@@ -70,7 +70,7 @@ header {
 
 .two-column-section {
   display: block;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -93,7 +93,7 @@ header {
   font-weight: 700;
   text-shadow: 4px 4px 0 var(--accent-color);
   position: absolute;
-  margin: 0; 
+  margin: 0;
   left: clamp(0px, calc(10px - 10 * (100vw - 375px) / 393), 0px);
   top: calc(238px + clamp(0px, (100vw - 375px) * 229 / 393, 229px) - max(0px,(100vw - 768px) * 148 / 256));
 }
@@ -242,7 +242,7 @@ footer {
   .two-column-section {
     display: grid;
     grid-template-columns:minmax(236px, calc(236px + (314 - 236) * (100vw - 768px) / (1024 - 768))) 1fr;
-    gap: 20px; 
+    gap: 20px;
     align-items: start;
   }
 
