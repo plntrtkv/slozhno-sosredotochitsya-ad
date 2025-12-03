@@ -4,7 +4,7 @@
   переключая тему
 */
 
- /* :root.theme-light {
+  :root.theme-light {
   --main-color: #ffeef6;
   --accent-color: #FF8DCB;
   --text-color: #353430;
@@ -40,4 +40,4 @@
 
 .title-decor {
   color: var(--text-color);
-} */
+}
