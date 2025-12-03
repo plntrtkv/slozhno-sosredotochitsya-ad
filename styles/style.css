@@ -242,7 +242,7 @@ footer {
   .two-column-section {
     display: grid;
     grid-template-columns:minmax(236px, calc(236px + (314 - 236) * (100vw - 768px) / (1024 - 768))) 1fr;
-    gap: 20px;
+    gap: 20px; 
     align-items: start;
   }
 
@@ -396,10 +396,19 @@ footer {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   .header {
     height: 768px;
   }
+
+  .tip:nth-child(4) {
+    margin-top: -12px;
+  }
+
+  .tips-section {
+    padding-bottom: 55px;
+  }
+
   .header__theme-menu {
     right: auto;
     top: auto;
@@ -411,6 +420,7 @@ footer {
   .gallery-section {
     padding: 0 5px;
     margin-top: -18px;
+    max-height: 1296px;
   }
 
   .middle-section-content {
@@ -425,10 +435,12 @@ footer {
     gap: 10px;
     padding-top: 20px;
   }
+
   main {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
   }
+  
   footer {
     min-height: 768px;
   }
