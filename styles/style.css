@@ -2,8 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-color: var(--main-color);
   background-image: var(--page-bg-image);
+  background-color: var(--main-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -30,7 +30,6 @@ header {
 .header__theme-menu {
   position: absolute;
   right: 10px;
-
 }
 
 .section-text {
@@ -46,11 +45,15 @@ header {
   font-weight: 400;
   color: var(--main-color);
   background-color: var(--accent-color);
+  margin-bottom: 10px;
 }
 
+.middle-section .accent-title,
+.reasons-section .accent-title {
+  margin-top: 20px;
+}
 .accent-title {
   font-weight: 700;
-  
 }
 
 .two-column-section:first-of-type {
@@ -63,7 +66,7 @@ header {
 }
 
 .two-column-section {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr; 
   gap: 20px;
 }
@@ -75,9 +78,6 @@ header {
   background-color: var(--main-color);
 }
 
-.title-decor {
-  margin-bottom: 10px;
-}
 .middle-section .section-title {
   margin-top: clamp(50px, calc(50px + 30 * (100vw - 375px) / 393), 80px);
 }
@@ -102,6 +102,14 @@ header {
   padding: 1.5px 13px;
   margin: 0;
   text-transform: lowercase;
+}
+
+.tips-section .section-title {
+  margin-bottom: 20px;
+}
+
+.tips .title-decor {
+  margin-top: 20px;
 }
 
 main {
@@ -134,10 +142,26 @@ main {
   border-left: 1px solid var(--accent-color);
 }
 
+.middle-section {
+  display: block;
+  gap: 20px;
+}
+
 .link {
   color: var(--text-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
+}
+
+footer {
+  background-color: var(--main-color);
+  min-height: clamp(668px, calc(668px - (100vw - 375px) * 100 / 393), 1024px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: clamp(40px, calc(40px + 20 * (100vw - 375px) / 393), 60px);
 }
 
 .header__theme-menu-item {
@@ -147,6 +171,23 @@ main {
   letter-spacing: 0%;
   color: var(--accent-color);
 }
+
+.gallery-title {
+  margin-top: clamp(50px, calc(50px + 30 * (100vw - 375px) / 393), 80px);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.picture {
+  width: 100%;
+  height: auto;
+}
+
 
 .footer__title {
   color: var(--title-accent-color);
@@ -183,12 +224,48 @@ main {
     padding-left: calc(20px - 10 * (100vw - 768px) / 256);
     padding-right: calc(20px - 10 * (100vw - 768px) / 256);
   }
+  
 }
 
 @media (min-width: 768px) {
   .header__title {
     margin-left: 0;
   }
+  .two-column-section {
+    display: grid;
+    grid-template-columns:minmax(236px, calc(236px + (314 - 236) * (100vw - 768px) / (1024 - 768))) 1fr;
+    gap: 20px; 
+    align-items: start;
+  }
+  .two-column-section .section-title {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+  .two-column-section > div {
+    grid-column: 2;
+  }
+  .tips{
+  margin-top: -100px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-areas:
+      "img1 img1 img2"
+      "img3 img4 img2"
+      "img3 img5 img5";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    justify-content: start;
+  }
+  
+  .picture:nth-child(1) { grid-area: img1; width: 479px; height: 192px; object-fit: cover}
+  .picture:nth-child(2) { grid-area: img2; width: 229px; justify-self: end; height: 442px; object-fit: cover}
+  .picture:nth-child(3) { grid-area: img3; width: 229px; height: 568px; object-fit: cover}
+  .picture:nth-child(4) { grid-area: img4; width: 230px; height: 230px; justify-self: center; object-fit: cover}
+  .picture:nth-child(5) { grid-area: img5; width: 479px; height: 320px; justify-self: end; object-fit: cover}
+
 }
 
 @media (max-width: 376px) {
@@ -206,12 +283,6 @@ main {
     padding-left: 10px;
     padding-right: 10px;
   }
-    /* img {
-    width: calc(100% + 20px);
-    margin-left: -10px;
-    margin-right: -10px;
-    display: block;
-    } */
 }
 
 @media (min-width: 376px) {
