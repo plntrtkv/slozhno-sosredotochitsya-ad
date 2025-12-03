@@ -1,16 +1,15 @@
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  margin: 0 auto;
 }
 
 h1,
@@ -36,7 +35,6 @@ picture {
 
 button,
 a {
-  text-decoration: none;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
