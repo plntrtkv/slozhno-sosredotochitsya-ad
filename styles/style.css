@@ -8,9 +8,6 @@
   background-size: cover;
   background-attachment: fixed;
   padding-right: 5px;
-}
-
-* {
   font-family: var(--font-family);
 }
 
@@ -379,7 +376,7 @@ footer {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-    footer {
+  footer {
     min-height: calc(668px + 356 * (100vw - 375px) / 393);
   }
 
