@@ -9,4 +9,6 @@
     --title-accent-color: #DB00FF;
     --font-family: "IBM Plex Mono", sans-serif;
     --page-bg-image: url('../images/cover-image-dark.png');
+    --less-saturated-accent-color: #FF007066;
+    --less-saturated-text-color: #32312D66;
 }

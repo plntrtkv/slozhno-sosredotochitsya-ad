@@ -10,7 +10,7 @@
   --text-color: #F1B2CE;
   --title-accent-color: #DB00FF;
   --font-family: "IBM Plex Mono", sans-serif;
-  --page-bg-image: url('../images/cover-image-light.png');
+  --page-bg-image: url('../images/cover-image-dark.png');
 }
 
 .header.decorated-zone .header__rec {
@@ -39,4 +39,21 @@
 
 .header__rec::before {
   content: "REC";
+}
+
+[data-theme="dark"],
+.theme-dark .header__theme-menu-button_type_dark {
+  border: 1px solid var(--accent-color);
+  padding: 0.5px 12px;
+}
+
+[data-theme="dark"],
+.theme-dark .header__theme-menu-button:hover {
+  border: 1px solid var(--less-saturated-accent-color);
+  padding: 0.5px 12px;
+}
+
+[data-theme="dark"],
+.theme-dark .header__theme-menu-button:focus-visible {
+  text-decoration: underline solid var(--accent-color);
 }
