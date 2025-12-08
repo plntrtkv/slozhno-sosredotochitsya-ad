@@ -7,7 +7,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding-right: 5px;
   font-family: var(--font-family);
 }
 
@@ -423,6 +422,10 @@ footer {
     padding-bottom: 55px;
   }
 
+  .header__title {
+    margin-top: 319px;
+  }
+
   .header__theme-menu {
     right: auto;
     top: auto;
@@ -485,3 +488,8 @@ footer {
   }
 }
 
+@media (min-width: 1024px) {
+  .header__text {
+    margin-top: 320px;
+  }
+}

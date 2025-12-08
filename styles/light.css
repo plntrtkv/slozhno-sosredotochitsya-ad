@@ -4,7 +4,7 @@
   переключая тему
 */
 
-  :root.theme-light {
+:root.theme-light {
   --main-color: #ffeef6;
   --accent-color: #FF8DCB;
   --text-color: #353430;
@@ -20,7 +20,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+:root {
   --main-color: #ffeef6;
   --accent-color: #FF8DCB;
   --text-color: #353430;
